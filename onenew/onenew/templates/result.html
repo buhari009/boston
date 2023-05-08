@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        table {
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 4px #ccc;
+            margin: 0 auto;
+            width: 600px;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #008CBA;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .accuracy {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .accuracy span {
+            background-color: #008CBA;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Result</h1>
+    <div class="accuracy">Accuracy: <span>{{ acc }}%</span></div>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1-score</th>
+                <th>Support</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>0</th>
+                <td>{{ precision_0 }}</td>
+                <td>{{ recall_0 }}</td>
+                <td>{{ f1_score_0 }}</td>
+                <td>{{ support_0 }}</td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>{{ precision_1 }}</td>
+                <td>{{ recall_1 }}</td>
+                <td>{{ f1_score_1 }}</td>
+                <td>{{ support_1 }}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
